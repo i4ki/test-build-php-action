@@ -1,0 +1,14 @@
+name: ci
+on: [push]
+jobs:
+
+  checks:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+
+      - name: setup php
+        uses: i4ki/build-php
+
